@@ -24,11 +24,11 @@ export class Database {
      * @param  {string | null} password=null
      */
     constructor(url: string, databasename: string, collections?: Array<string>, username?: string | null, password?: string | null);
-    establishingConnection: boolean;
+    establishingConnection: boolean | undefined;
     /** @type {mongodb.MongoClient} */
     client: any;
-    collections: string[];
-    databaseName: string;
+    collections: string[] | undefined;
+    databaseName: string | undefined;
     establishConnection(): Promise<void>;
     db: any;
     generateCollections(): Promise<void>;

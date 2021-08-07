@@ -82,6 +82,7 @@ export class Database {
         }
 
         this.establishConnection();
+        instance = this;
     }
 
     async establishConnection() {
@@ -95,7 +96,6 @@ export class Database {
 
         this.db = this.client.db(this.databaseName);
         this.generateCollections();
-        instance = this;
 
         for (let i = 0; i < onReadyCallbacks.length; i++) {
             onReadyCallbacks[i]();
