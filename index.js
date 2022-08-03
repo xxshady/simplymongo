@@ -69,7 +69,7 @@ export class Database {
                 useUnifiedTopology: true,
                 useNewUrlParser: true,
                 auth: {
-                    user: username,
+                    username: username,
                     password: password,
                 },
             });
